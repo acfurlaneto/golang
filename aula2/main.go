@@ -3,20 +3,17 @@ package main
 import "fmt"
 
 func main() {
-    var num1, num2 float64
+    var usuario, senha string
 
-    fmt.Print("Digite o primeiro número: ")
-    fmt.Scan(&num1)
-    fmt.Print("Digite o segundo número: ")
-    fmt.Scan(&num2)
+    fmt.Print("Digite o usuário: ")
+    fmt.Scan(&usuario)
 
-    fmt.Println("Soma:", num1+num2)
-    fmt.Println("Subtração:", num1-num2)
-    fmt.Println("Multiplicação:", num1*num2)
+    fmt.Print("Digite a senha: ")
+    fmt.Scan(&senha)
 
-    if num2 != 0 {
-        fmt.Println("Divisão:", num1/num2)
+    if usuario == "admin" && senha == "1234" {
+        fmt.Println("Acesso permitido!")
     } else {
-        fmt.Println("Não é possível dividir por zero.")
+        fmt.Println("Acesso negado!")
     }
 }
